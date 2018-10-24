@@ -1,0 +1,6 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1540330579;s:6:"expire";i:1540334179;s:4:"tags";s:69:"9c8_BLOCK_HTML,9c8_CAT_C,9c8_CAT_C_3,9c8_CAT_C_4,9c8_CAT_C_5,9c8_MAGE";}
+
+<nav class="navigation" data-action="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <li  class="level0 nav-1 category-item first level-top"><a href="http://www.weamplify.in/magento/collections.html"  class="level-top" ><span>COLLECTIONS</span></a></li><li  class="level0 nav-2 category-item level-top"><a href="http://www.weamplify.in/magento/shop.html"  class="level-top" ><span>SHOP</span></a></li><li  class="level0 nav-3 category-item active last level-top"><a href="http://www.weamplify.in/magento/about-us.html"  class="level-top" ><span>ABOUT US</span></a></li>            </ul>
+</nav>

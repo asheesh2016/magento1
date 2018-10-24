@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1540280348;s:6:"expire";i:9999999999;s:4:"tags";s:37:"9c8_LAYOUT_GENERAL_CACHE_TAG,9c8_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1540330296;s:6:"expire";i:9999999999;s:4:"tags";s:37:"9c8_LAYOUT_GENERAL_CACHE_TAG,9c8_MAGE";}
 <?xml version="1.0"?>
 <layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><handle id="catalog_category_view"><body/>
 </handle><handle id="catalogsearch_advanced_index"><body/>
@@ -733,14 +733,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1540280348;s:6:"expire";i:9999999999;s:4:"t
    </referenceBlock>
 </body>
 </handle><handle id="default"><body>
-   <block class="Magento\Framework\Pricing\Render" name="product.price.render.default">
-      <arguments>
-         <argument name="price_render_handle" xsi:type="string">catalog_product_prices</argument>
-         <argument name="use_link_for_as_low_as" xsi:type="boolean">true</argument>
-      </arguments>
-   </block>
-</body>
-</handle><handle id="default"><body>
    <referenceContainer name="before.body.end">
       <block class="Magento\Catalog\Block\FrontendStorageManager" name="frontend-storage-manager" before="-" template="Magento_Catalog::frontend_storage_manager.phtml">
          <arguments>
@@ -794,6 +786,14 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1540280348;s:6:"expire";i:9999999999;s:4:"t
       <block class="Magento\Framework\View\Element\Js\Components" name="head.components" as="components" template="Magento_Catalog::js/components.phtml"/>
    </referenceContainer>
    <block class="Magento\Framework\View\Element\Template" name="head.additional" as="head.additional" template="Magento_Theme::html/container.phtml"/>
+</body>
+</handle><handle id="default"><body>
+   <block class="Magento\Framework\Pricing\Render" name="product.price.render.default">
+      <arguments>
+         <argument name="price_render_handle" xsi:type="string">catalog_product_prices</argument>
+         <argument name="use_link_for_as_low_as" xsi:type="boolean">true</argument>
+      </arguments>
+   </block>
 </body>
 </handle><handle id="empty"><body>
    <block class="Magento\Framework\Pricing\Render" name="product.price.render.default">
@@ -6410,6 +6410,462 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1540280348;s:6:"expire";i:9999999999;s:4:"t
    <referenceContainer name="content">
       <block class="Dotdigitalgroup\Email\Block\Customer\Account\Books" name="ddg.additional.books" template="Dotdigitalgroup_Email::email/newsletter-preferences.phtml" after="-"/>
    </referenceContainer>
+</body>
+</handle><handle id="catalog_category_default"><body>
+   <referenceContainer name="right">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.right.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-right-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-right-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.right.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-right-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-right-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="left">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.left.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-left-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-left-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.left.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-left-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-left-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="before.body.end">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.page.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-page-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-page-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-content-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-content-top</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceBlock name="header.container">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.menu.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-menu-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-menu-top</argument>
+         </action>
+      </block>
+   </referenceBlock>
+   <referenceBlock name="page.top">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.menu.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-menu-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-menu-bottom</argument>
+         </action>
+      </block>
+   </referenceBlock>
+</body>
+</handle><handle id="catalog_category_layered"><body>
+   <referenceContainer name="right">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.right.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-right-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-right-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.right.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-right-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-right-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="left">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.left.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-left-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-left-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.left.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-left-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-left-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="before.body.end">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.page.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-page-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-page-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-content-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-content-top</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceBlock name="header.container">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.menu.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-menu-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-menu-top</argument>
+         </action>
+      </block>
+   </referenceBlock>
+   <referenceBlock name="page.top">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.menu.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-menu-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-menu-bottom</argument>
+         </action>
+      </block>
+   </referenceBlock>
+</body>
+</handle><handle id="catalog_category_view"><body>
+   <referenceContainer name="right">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.right.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-right-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-right-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.right.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-right-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-right-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="left">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.left.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-left-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-left-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.left.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-left-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-sidebar-left-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="before.body.end">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.page.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-page-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-page-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-content-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-content-top</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceBlock name="header.container">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.menu.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-menu-top</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-menu-top</argument>
+         </action>
+      </block>
+   </referenceBlock>
+   <referenceBlock name="page.top">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.menu.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-menu-bottom</argument>
+         </action>
+         <action method="setCategoryPosition">
+            <argument name="position" xsi:type="string">category-menu-bottom</argument>
+         </action>
+      </block>
+   </referenceBlock>
+</body>
+</handle><handle id="catalog_product_view"><body>
+   <referenceContainer name="right">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.right.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-right-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.right.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-right-bottom</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.product.sidebar.right.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">product-sidebar-right-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.product.sidebar.right.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">product-sidebar-right-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="left">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.left.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-left-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.sidebar.left.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-sidebar-left-bottom</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.product.sidebar.left.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">product-sidebar-left-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.product.sidebar.left.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">product-sidebar-left-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="before.body.end">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.page.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-page-bottom</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.product.page.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">product-page-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-content-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.product.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">product-content-top</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceBlock name="header.container">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.menu.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-menu-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.product.menu.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">product-menu-top</argument>
+         </action>
+      </block>
+   </referenceBlock>
+   <referenceBlock name="page.top">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.catalog.menu.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">catalog-menu-bottom</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.product.menu.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">product-menu-bottom</argument>
+         </action>
+      </block>
+   </referenceBlock>
+</body>
+</handle><handle id="checkout_cart_index"><body>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.cart.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">cart-content-top</argument>
+         </action>
+      </block>
+   </referenceContainer>
+</body>
+</handle><handle id="checkout_onepage_failure"><update handle="checkout_position_content_top"/>
+</handle><handle id="checkout_onepage_index"><update handle="checkout_position_content_top"/>
+</handle><handle id="checkout_onepage_review"><update handle="checkout_position_content_top"/>
+</handle><handle id="checkout_onepage_success"><update handle="checkout_position_content_top"/>
+</handle><handle id="checkout_position_content_top"><body>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.checkout.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">checkout-content-top</argument>
+         </action>
+      </block>
+   </referenceContainer>
+</body>
+</handle><handle id="cms_index_index"><body>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.cms.page.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">cms-page-content-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.popup.on.homepage">
+         <action method="setPopupOnHomePage"/>
+      </block>
+   </referenceContainer>
+</body>
+</handle><handle id="customer_account"><body>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.customer.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">customer-content-top</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="sidebar.main">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.sidebar.main.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">customer-sidebar-main-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.sidebar.main.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">customer-sidebar-main-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+</body>
+</handle><handle id="customer_address_index"><body>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">customer-content-top</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="left">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">sidebar-left-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+</body>
+</handle><handle id="default"><body>
+   <referenceContainer name="right">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.sidebar.right.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">sidebar-right-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.sidebar.right.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">sidebar-right-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="left">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.sidebar.left.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">sidebar-left-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.sidebar.left.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">sidebar-left-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="before.body.end">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.page.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">page-bottom</argument>
+         </action>
+      </block>
+   </referenceContainer>
+   <referenceContainer name="content">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.content.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">content-top</argument>
+         </action>
+      </block>
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.note.all.site">
+         <action method="setPositionNote"/>
+      </block>
+   </referenceContainer>
+   <referenceBlock name="header.container">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.menu.top" before="-">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">menu-top</argument>
+         </action>
+      </block>
+   </referenceBlock>
+   <referenceBlock name="page.top">
+      <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.menu.bottom">
+         <action method="setPosition">
+            <argument name="position" xsi:type="string">menu-bottom</argument>
+         </action>
+      </block>
+   </referenceBlock>
 </body>
 </handle><handle id="checkout_index_index"><body>
    <referenceBlock name="checkout.root">
